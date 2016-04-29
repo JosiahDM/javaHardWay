@@ -16,3 +16,5 @@ public class EscapeSequencesComments {
 		// and comments. :)
 	}
 }
+
+// Block comment in middle of keyword will not compile.
