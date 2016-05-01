@@ -15,5 +15,8 @@ public class ForgetfulMachine {
 
 		System.out.println( "Is there anything else you would like to say?" );
 		keyboard.next();
+
+		// The second question blows up when I type "asdf".
+		// The third question blows up when I type "+".
 	}
 }
