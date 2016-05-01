@@ -31,5 +31,15 @@ public class MathOperations {
 		two = "house";
 		both = one + two;
 		System.out.println( both );
+
+		// Study drills
+		int i;
+		double j;
+
+		i = (a + 2) * 2;
+		System.out.println( "\n(a+2)*2 is " + i );
+		j = (x * 10) % 10 - 1;
+		System.out.println( "(x*10)%10 - 1 is " + j );
+
 	}
 }
