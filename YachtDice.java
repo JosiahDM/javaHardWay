@@ -1,6 +1,7 @@
 public class YachtDice {
 	public static void main(String[] args) {
 		int r1, r2, r3, r4, r5, r6;
+		int rolls = 0;
 		boolean allSame;
 
 		do {
@@ -11,18 +12,22 @@ public class YachtDice {
 			r5 = 1 + (int)(Math.random() * 6);
 			r6 = 1 + (int)(Math.random() * 6);
 
-			System.out.print("\nYou rolled: " + r1 + " " + r2 + " ");
-			System.out.println(r3 + " " + r4 + " " + r5 + " " + r6);
-			showDice(r1);
-			showDice(r2);
-			showDice(r3);
-			showDice(r4);
-			showDice(r5);
-			showDice(r6);
+			// changed here to not spam the console and keep track of number of rolls
+			rolls++;
 			allSame = ( r1 == r2 && r2 == r3 && r3 == r4 && r4 == r5 &&  r5 == r6);
 
 		} while ( ! allSame );
+		
+		System.out.print("\nYou rolled: " + r1 + " " + r2 + " ");
+		System.out.println(r3 + " " + r4 + " " + r5 + " " + r6);
+		showDice(r1);
+		showDice(r2);
+		showDice(r3);
+		showDice(r4);
+		showDice(r5);
+		showDice(r6);
 		System.out.println("The Yacht!!");
+		System.out.println("It took " + rolls + " to hit.");
 	}
 
 	public static void showDice( int roll ) {
